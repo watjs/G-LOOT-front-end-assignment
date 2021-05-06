@@ -1,4 +1,4 @@
-import React, { createRef, useContext, useState } from 'react';
+import React, { createRef, useContext, useEffect, useState } from 'react';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import PlayersContext from '../../contexts/PlayersContext';
 import { validatePlayerName } from '../../helpers/validate-palyer-name';
@@ -40,6 +40,12 @@ export default function Player({ player }: PlayerProps) {
             );
         }
     };
+
+    useEffect(() => {
+        if (isEditing) {
+            playerNameRef.current?.focus();
+        }
+    }, [isEditing, playerNameRef]);
 
     return (
         <tr className="d-flex">

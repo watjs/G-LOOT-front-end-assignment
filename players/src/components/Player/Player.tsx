@@ -1,7 +1,7 @@
 import React, { createRef, useContext, useEffect, useState } from 'react';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import PlayersContext from '../../contexts/PlayersContext';
-import { validatePlayerName } from '../../helpers/validate-palyer-name';
+import { validatePlayerName } from '../../helpers/validate-player-name';
 import { IPlayer } from '../../models/player.interface';
 import Loader from '../loader/Loader';
 type PlayerProps = {

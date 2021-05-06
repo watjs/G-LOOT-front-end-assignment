@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
 import PlayersContext from '../../contexts/PlayersContext';
-import { validatePlayerName } from '../../helpers/validate-palyer-name';
+import { validatePlayerName } from '../../helpers/validate-player-name';
 import Loader from '../loader/Loader';
 
 export default function AddNewPlayer() {

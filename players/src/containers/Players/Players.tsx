@@ -65,7 +65,8 @@ export default function Players() {
     const updatePlayer = (
         id: string,
         name: string,
-        successCallback: Function
+        successCallback: Function,
+        errorCallback: Function
     ): void => {
         playersService
             .updatePlayerById(id, name)
@@ -80,6 +81,7 @@ export default function Players() {
             })
             .catch(() => {
                 showError(true);
+                errorCallback();
             });
     };
 
@@ -148,7 +150,7 @@ export default function Players() {
                 className="text-white bg-danger"
                 onClose={() => showError(false)}
                 show={hasError}
-                delay={3000}
+                delay={6000}
                 animation={false}
                 autohide={true}
                 style={{

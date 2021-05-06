@@ -25,6 +25,12 @@ export default function Player({ player }: PlayerProps) {
             ) {
                 return;
             }
+
+            if (player.name === name) {
+                editPlayer(false);
+                return;
+            }
+
             setLoading(true);
 
             updatePlayer(

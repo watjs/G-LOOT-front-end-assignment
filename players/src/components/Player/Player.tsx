@@ -6,9 +6,10 @@ import { IPlayer } from '../../models/player.interface';
 import Loader from '../loader/Loader';
 type PlayerProps = {
     player: IPlayer;
+    index: number;
 };
 
-export default function Player({ player }: PlayerProps) {
+export default function Player({ player, index }: PlayerProps) {
     const [isEditing, editPlayer] = useState(false);
     const { confirmDeletePlayer, updatePlayer } = useContext(PlayersContext);
     const [isLoading, setLoading] = useState(false);
@@ -55,8 +56,8 @@ export default function Player({ player }: PlayerProps) {
 
     return (
         <tr className="d-flex">
-            <td className="col-lg-3">{player.id}</td>
-            <td className="col-lg-6">
+            <td className="col-lg-1">{index + 1}</td>
+            <td className="col-lg-8">
                 {isEditing ? (
                     <Form onSubmit={handlePlayerUpdate}>
                         <Form.Row>

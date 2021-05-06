@@ -121,15 +121,16 @@ export default function Players() {
                             <table className="table table-striped table-hover">
                                 <thead>
                                     <tr className="d-flex">
-                                        <th className="col-lg-3">ID</th>
-                                        <th className="col-lg-6">Name</th>
+                                        <th className="col-lg-1">ID</th>
+                                        <th className="col-lg-8">Name</th>
                                         <th className="col-lg-3">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {players.map((player) => (
+                                    {players.map((player, index) => (
                                         <Player
                                             key={player.id}
+                                            index={index}
                                             player={player}
                                         />
                                     ))}

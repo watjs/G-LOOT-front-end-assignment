@@ -1,7 +1,13 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
+import Players from './containers/Players/Players';
 
 function App() {
-    return <h1>Players</h1>;
+    return (
+        <Container className="mt-5">
+            <Players />
+        </Container>
+    );
 }
 
 export default App;

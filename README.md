@@ -32,7 +32,7 @@ These are some of the things we appreciate:
 - If you are using a boilerplate, please submit the boilerplate code and your own code in different git commits, so that we may differentiate the two.
 - Uploading the assignment to github and sending us the link is our preferred method of submission. However you may send the project as a zip file instead if github is not an option for you.
 
-# Notes
+## Notes
 
 - Empty state for player list
 - Confirmation window modal on player deletion
